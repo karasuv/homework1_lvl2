@@ -28,21 +28,21 @@ public class Homework1 {
             for (Playerable player: players) {
                 if (test instanceof Wall) {
 
-                            if (player instanceof Human && ((Human) player).isStopGame()==false)
+                            if (player instanceof Human && !((Human) player).isStopGame())
                     if (((Wall) test).getHeight()< ((Human) player).getHeightLimit()){
                     player.jump();}
                     else {System.out.println(((Human) player).getName() +" прекращает прохождение препятствий");
                         ((Human) player).setStopGame(true);
                     }
 
-                    if (player instanceof Robot && ((Robot) player).isStopGame()==false)
+                    if (player instanceof Robot && !((Robot) player).isStopGame())
                         if (((Wall) test).getHeight()< ((Robot) player).getHeightLimit()){
                             player.jump();}
                         else {System.out.println(((Robot) player).getName() +" прекращает прохождение препятствий");
                             ((Robot) player).setStopGame(true);
                         }
 
-                    if (player instanceof Cat && ((Cat) player).isStopGame()==false)
+                    if (player instanceof Cat && !((Cat) player).isStopGame())
                         if (((Wall) test).getHeight()< ((Cat) player).getHeightLimit()){
                             player.jump();}
                         else {System.out.println(((Cat) player).getName() +" прекращает прохождение препятствий");
@@ -51,21 +51,21 @@ public class Homework1 {
 
                 }
                 if (test instanceof Track) {
-                    if (player instanceof Human && ((Human) player).isStopGame()==false)
+                    if (player instanceof Human && !((Human) player).isStopGame())
                         if (((Track) test).getDistance()< ((Human) player).getDistanceLimit()){
                             player.run();}
                         else {System.out.println(((Human) player).getName() +" прекращает прохождение препятствий");
                             ((Human) player).setStopGame(true);
                         }
 
-                    if (player instanceof Robot && ((Robot) player).isStopGame()==false)
+                    if (player instanceof Robot && !((Robot) player).isStopGame())
                         if (((Track) test).getDistance()< ((Robot) player).getDistanceLimit()){
                             player.run();}
                         else {System.out.println(((Robot) player).getName() +" прекращает прохождение препятствий");
                             ((Robot) player).setStopGame(true);
                         }
 
-                    if (player instanceof Cat && ((Cat) player).isStopGame()==false)
+                    if (player instanceof Cat && !((Cat) player).isStopGame())
                         if (((Track) test).getDistance()< ((Cat) player).getDistanceLimit()){
                             player.run();}
                         else {System.out.println(((Cat) player).getName() +" прекращает прохождение препятствий");
